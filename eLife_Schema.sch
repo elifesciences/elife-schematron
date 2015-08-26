@@ -29,6 +29,15 @@
     <!-- Including contrib-group -->
     <include href="contrib-group.sch"/>
     
+    <!-- Including names -->
+    <include href="names.sch"/>
+    
+    <!-- Including affiliations -->
+    <include href="aff.sch"/>
+    
+    <!-- Including dates -->
+    <include href="dates.sch"/>
+    
         <!-- Including abstract -->
     <!-- <include href="abstract.sch"/>-->
 
