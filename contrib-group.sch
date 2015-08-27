@@ -3,6 +3,7 @@
 	<rule context="contrib-group">
 		<assert test="contrib" role="error" diagnostics="no-contrib"/>
 		<report test="on-behalf-of" role="warning" diagnostics="on-behalf-of-present"/>
+		<assert test="on-behalf-of[text()[contains(.,'on behalf of')]]" role="warning" diagnostics="on-behalf-of-missing"/>
 		<assert test="aff" role="error" diagnostics="no-aff"/>
 	</rule>
 	
@@ -18,19 +19,17 @@
 	<rule context="contrib[@corresp='yes']">
 		<assert test="./xref[@ref-type='corresp']" role="error" diagnostics="missing-xref-corresp" />
 	</rule>
+	
 	<rule context="contrib[@contrib-type='author']/contrib-id[@contrib-id-type='group-author-key']">
 		<assert test="following-sibling::collab" role="error" diagnostics="missing-collab-group-author" /> 
 	</rule>
 	
-	<rule context="on-behalf-of">
-		<assert test='matches( . , "on behalf of")' role="warning" diagnostics="on-behalf-of-missing"/>
-	</rule>
 	
 	<diagnostics>
 	 	<diagnostic id="no-contrib">contrib tag is not present.</diagnostic>
 		<diagnostic id="invalid-contrib">contrib tag should be contained within contrib-group.</diagnostic>
 		<diagnostic id="on-behalf-of-present">on-behalf-of tag is present.</diagnostic>
-		<diagnostic id="on-behalf-of-missing">on-behalf-of statement <value-of select="." /> does not have the text on behalf of in its contents.</diagnostic>
+		<diagnostic id="on-behalf-of-missing">on-behalf-of statement "<value-of select="./on-behalf-of" />" does not have the text "on behalf of" in its contents.</diagnostic>
 		<diagnostic id="missing-collab-group-author">Collab is missing for group-author <value-of select="." />.</diagnostic>
 		<diagnostic id="missing-xref-corresp">xref corresp is missing for contrib</diagnostic>
 		<diagnostic id="no-aff">aff tag is not present.</diagnostic>

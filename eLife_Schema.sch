@@ -17,7 +17,7 @@
     <!-- Including journal-meta -->
     <include href="journal-meta.sch"/>  
     
-    <!-- Including article-meta -->
+    <!-- Including article-meta, self-uri, related-article -->
     <include href="article-meta.sch"/>  
     
     <!-- Including article-categories -->
@@ -38,9 +38,18 @@
     <!-- Including dates -->
     <include href="dates.sch"/>
     
-        <!-- Including abstract -->
-    <!-- <include href="abstract.sch"/>-->
-
+    <!-- Including abstract -->
+    <include href="abstract.sch"/>
+    
+    <!-- Including keywords -->
+    <include href="kwd.sch"/>
+    
+    <!-- Including funding group -->
+    <include href="funding-group.sch"/>
+    
+    <!-- Including custom meta -->
+    <include href="custom-meta.sch"/>
+    
     <!-- Including <fig> tests -->
     <!--<include href="fig.sch"/>-->
     
