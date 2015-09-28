@@ -3,9 +3,9 @@
 	<rule context="//aff">
 		<assert test="institution[@content-type='dept']" role="warning" diagnostics="no-institution-dept"/>
 		<assert test="institution" role="error" diagnostics="no-institution"/>
-		<assert test="addr-line" role="error" diagnostics="no-addr-line"/>
+		<assert test="addr-line" role="warning" diagnostics="no-addr-line"/>
 		<assert test="country" role="error" diagnostics="no-country"/>
-		<assert test="addr-line/named-content[@content-type='city']" role="error" diagnostics="no-name-content-city"/>
+		<assert test="addr-line/named-content[@content-type='city']" role="warning" diagnostics="no-name-content-city"/>
 	</rule>
 	<diagnostics>
         <diagnostic id="no-institution-dept">There is no institution dept in <value-of select="." />.</diagnostic>

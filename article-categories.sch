@@ -8,7 +8,7 @@
 		<assert test="matches(.,'^(Research article|Short report|Tools and resources|Research advance|Registered report|Editorial|Insight)$')" role="error" diagnostics="invalid-subj-group-display-channel"/>
 	</rule>
 	<rule context="article-categories/subj-group[@subj-group-type='heading']/subject">
-		<assert test="matches(.,'^(Neuroscience|Biochemistry|Human biology and medicine|Developmental biology and stem cells|Immunology|Ecology|Microbiology and infectious disease|Epidemiology and global health|Biophysics and structural biology|Computational and systems biology|Genomics and evolutionary biology|Plant biology|Genes and chromosomes)$')" role="error" diagnostics="invalid-subj-group-heading"/>
+		<assert test="matches(.,'^(Neuroscience|Biochemistry|Human biology and medicine|Developmental biology and stem cells|Immunology|Ecology|Microbiology and infectious disease|Epidemiology and global health|Biophysics and structural biology|Cell biology|Computational and systems biology|Genomics and evolutionary biology|Plant biology|Genes and chromosomes)$')" role="error" diagnostics="invalid-subj-group-heading"/>
 	</rule>
 	<rule context="article-categories/subj-group[@subj-group-type='heading']">
 		<report test="following-sibling::subj-group[@subj-group-type='heading']" role="warning" diagnostics="multiple-subj-group-heading"/> 

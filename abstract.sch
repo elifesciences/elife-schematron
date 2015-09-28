@@ -9,7 +9,7 @@
 		<assert test="matches(descendant::ext-link[@ext-link-type='doi'], $objdoiurl)" role="error" diagnostics="invalid-ext-link-doi"/>
 		<assert test="matches(descendant::ext-link[@ext-link-type='doi']/@xlink:href, $objdoi )" role="error" diagnostics="invalid-ext-link-href"/>
 		<report test="descendant::xref[@ref-type='bibr']" role="error" diagnostics="present-xref-bibr"/>
-		<assert test="descendant::ext-link[@ext-link-type='uri']" role="warning" diagnostics="absent-ext-link-uri"/>
+		<report test="descendant::ext-link[@ext-link-type='uri']" role="warning" diagnostics="present-ext-link-uri"/>
 	</rule>
 	
 	<rule context="//abstract[@abstract-type='executive-summary']">
@@ -25,7 +25,7 @@
 	<diagnostics>
 		<diagnostic id="invalid-object-id-doi">The abstract has an invalid Object-id <value-of select="object-id[@pub-id-type='doi']"/>. It should be <value-of select="$objdoi"/></diagnostic>
 		<diagnostic id="present-xref-bibr">Abstract has xref[@ref-type='bibr'] tag.</diagnostic>
-		<diagnostic id="absent-ext-link-uri">Abstract does not have ext-link[@ ext-link-type='uri'] tag.</diagnostic>
+		<diagnostic id="present-ext-link-uri">Abstract has ext-link[@ ext-link-type='uri'] tag.</diagnostic>
 		<diagnostic id="no-title">The abstract title "<value-of select="./title"/>" should contain "eLife digest"</diagnostic>
 		<diagnostic id="invalid-ext-link-doi">The ext-link [@ ext-link-type='doi'] has an invalid Object-id <value-of select="descendant::ext-link[@ext-link-type='doi']"/> for abstract. It should be <value-of select="$objdoiurl"/></diagnostic>
 		<diagnostic id="invalid-ext-link-href">The ext-link [@ ext-link-type='doi'] has an invalid href <value-of select="descendant::ext-link[@ext-link-type='doi']/@xlink:href"/> for abstract. It should be <value-of select="$objdoi"/></diagnostic>

@@ -7,8 +7,8 @@
 	</rule>
 	
 	<rule context="//name/surname">
-		<assert test='matches( . ,"^(\p{Lu}|af |av |da |das |de |der |di |do |dos |du |dit |la |na |tot |van |von |zu |d )")' role="error" diagnostics="surname-not-matched"/>
-		<assert test="not(matches( . ,'-'))" role="warning" diagnostics="surname-not-match-hyphen"/>
+		<assert test='matches( . ,"^(\p{Lu}|af |av |da |das |de |der |di |do |dos |du |dit |el |la |na |tot |van |von |zu |d )")' role="error" diagnostics="surname-not-matched"/>
+		<report test="matches( . ,'\w\s+\w')" role="warning" diagnostics="surname-not-match-hyphen"/>
 	</rule>
 	
 	<rule context="//name/given-names">
@@ -23,7 +23,7 @@
 	<diagnostics>
 		<diagnostic id="surname-missing">Surname is missing for name.<value-of select="."/></diagnostic>
 	 	<diagnostic id="surname-not-matched">Surname must start with capital letter or with allowed characters in name <value-of select="."/></diagnostic>
-		<diagnostic id="surname-not-match-hyphen">Double surname must not have hyphen in name <value-of select="."/>.</diagnostic>
+		<diagnostic id="surname-not-match-hyphen">Double surname are presented without a hyphen in name <value-of select="."/>.</diagnostic>
 		<diagnostic id="gn-missing">Given names are missing for name.<value-of select="."/></diagnostic>
 	 	<diagnostic id="gn-match">The name <value-of select="."/> must be capitalized.</diagnostic>
 		<diagnostic id="gn-not-match">The name <value-of select="."/> must be capitalized.</diagnostic>
