@@ -10,12 +10,51 @@
     
     <!-- Including article -->
     <include href="article.sch"/>  
-
+    
+    <!-- Including front -->
+    <include href="front.sch"/>  
+    
+    <!-- Including journal-meta -->
+    <include href="journal-meta.sch"/>  
+    
+    <!-- Including article-meta, self-uri, related-article -->
+    <include href="article-meta.sch"/>  
+    
+    <!-- Including article-categories -->
+    <include href="article-categories.sch"/>  
+    
+    <!-- Including title-group -->
+    <include href="title-group.sch"/>  
+    
+    <!-- Including contrib-group -->
+    <include href="contrib-group.sch"/>
+    
+    <!-- Including names -->
+    <include href="names.sch"/>
+    
+    <!-- Including affiliations -->
+    <include href="aff.sch"/>
+    
+    <!-- Including dates -->
+    <include href="dates.sch"/>
+    
+    <!-- Including abstract -->
+    <include href="abstract.sch"/>
+    
+    <!-- Including keywords -->
+    <include href="kwd.sch"/>
+    
+    <!-- Including funding group -->
+    <include href="funding-group.sch"/>
+    
+    <!-- Including custom meta -->
+    <include href="custom-meta.sch"/>
+    
     <!-- Including <fig> tests -->
-    <include href="fig.sch"/>
+    <!--<include href="fig.sch"/>-->
     
     <!-- Including <fig-group> tests -->
-    <include href="fig-group.sch"/>
+    <!--<include href="fig-group.sch"/>-->
     
     <!-- Including <ref> tests -->    
     <include href="ref.sch"/>
